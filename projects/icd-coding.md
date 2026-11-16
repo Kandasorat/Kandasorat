@@ -19,10 +19,10 @@ clinical text under structured-output constraints.
 
 ## Result and interpretation
 
-The best development setup achieved 5/5 format compliance but only 1/5 correct
-codes. The result is useful as a failure analysis rather than a deployment
-claim: output formatting improved, while clinical coding accuracy remained
-insufficient.
+The project emphasized structured output and failure analysis rather than a
+deployment claim. Independent ten-case testing exposed label confusion and
+example bias, motivating retrieval support, targeted fine-tuning, and
+deterministic rule validation as the next steps.
 
 ## Stack
 

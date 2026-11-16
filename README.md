@@ -19,11 +19,11 @@ workflows.
 
 | Project | What I worked on | Public evidence |
 |---|---|---|
-| [Intracranial haemorrhage segmentation](projects/ich-segmentation.md) | Five-fold comparison of 2D, standard three-slice 2.5D, and 3D nnU-Net on 192 head CT cases | [Code and validated aggregate results](https://github.com/Kandasorat/bhsd-nnunet) |
-| [Clinical ICD coding with a small language model](projects/icd-coding.md) | Structured-output prompting and error analysis with Qwen2.5-0.5B-Instruct | Public project summary; clinical text is not published |
-| [Breast tumour classification](projects/breast-tumour-classification.md) | Data cleaning, stratified evaluation, and regularized logistic-regression tuning | Public project summary; coursework data is not published |
-| [Marine microbial abundance analysis](projects/marine-microbial-analysis.md) | Plate-count and fluorescence-microscopy comparison across environmental samples | Public project summary |
-| [Stimuli-responsive marine polysaccharide nanocarrier](projects/nanocarrier-research.md) | Undergraduate project leadership and wet-lab validation | Public project summary |
+| [Intracranial haemorrhage segmentation](projects/ich-segmentation.md) | 2025.11–2026.08 · Five-fold comparison of 2D, standard three-slice 2.5D, and 3D nnU-Net on 192 head CT cases | [Code and validated aggregate results](https://github.com/Kandasorat/bhsd-nnunet) |
+| [Clinical ICD coding with a small language model](projects/icd-coding.md) | 2025.09–2025.12 · Structured-output prompting and error analysis with Qwen2.5-0.5B-Instruct | Public project summary; clinical text is not published |
+| [Breast tumour classification](projects/breast-tumour-classification.md) | 2025.02–2025.03 · Data cleaning, stratified evaluation, and regularized logistic-regression tuning | Public project summary; coursework data is not published |
+| [Marine microbial abundance analysis](projects/marine-microbial-analysis.md) | 2021.01–2021.05 · Plate-count and fluorescence-microscopy comparison across environmental samples | Public project summary |
+| [Stimuli-responsive marine polysaccharide nanocarrier](projects/nanocarrier-research.md) | 2020.01–2020.06 · Undergraduate project leadership and wet-lab validation | Public project summary |
 
 ## Selected results
 

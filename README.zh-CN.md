@@ -17,11 +17,11 @@
 
 | 项目 | 主要工作 | 公开内容 |
 |---|---|---|
-| [脑出血 CT 多类别分割](projects/ich-segmentation.md) | 在 192 例头颅 CT 上五折对比 2D、标准三切片 2.5D 与 3D nnU-Net | [代码与已验证的聚合结果](https://github.com/Kandasorat/bhsd-nnunet) |
-| [临床文本 ICD 编码小模型实验](projects/icd-coding.md) | 使用 Qwen2.5-0.5B-Instruct 开展结构化输出 Prompt 实验与错误分析 | 仅公开项目摘要，不公开临床文本 |
-| [乳腺肿瘤良恶性分类](projects/breast-tumour-classification.md) | 数据清洗、分层评估与正则化逻辑回归调参 | 仅公开项目摘要，不公开课程数据 |
-| [海水微生物丰度与环境因素分析](projects/marine-microbial-analysis.md) | 比较平板计数和荧光显微方法并分析环境样本 | 公开项目摘要 |
-| [微环境响应型海洋多糖纳米基因载体](projects/nanocarrier-research.md) | 本科项目负责人，组织实验并参与体外验证 | 公开项目摘要 |
+| [脑出血 CT 多类别分割](projects/ich-segmentation.md) | 2025.11–2026.08 · 在 192 例头颅 CT 上五折对比 2D、标准三切片 2.5D 与 3D nnU-Net | [代码与已验证的聚合结果](https://github.com/Kandasorat/bhsd-nnunet) |
+| [临床文本 ICD 编码小模型实验](projects/icd-coding.md) | 2025.09–2025.12 · 使用 Qwen2.5-0.5B-Instruct 开展结构化输出 Prompt 实验与错误分析 | 仅公开项目摘要，不公开临床文本 |
+| [乳腺肿瘤良恶性分类](projects/breast-tumour-classification.md) | 2025.02–2025.03 · 数据清洗、分层评估与正则化逻辑回归调参 | 仅公开项目摘要，不公开课程数据 |
+| [海水微生物丰度与环境因素分析](projects/marine-microbial-analysis.md) | 2021.01–2021.05 · 比较平板计数和荧光显微方法并分析环境样本 | 公开项目摘要 |
+| [微环境响应型海洋多糖纳米基因载体](projects/nanocarrier-research.md) | 2020.01–2020.06 · 本科项目负责人，组织实验并参与体外验证 | 公开项目摘要 |
 
 ## 代表成果
 
