@@ -113,25 +113,42 @@ knowledge needed for principal-diagnosis coding.
 
 ## 7. Error analysis
 
-The predictions showed three recurring failure modes:
+The analysis separates **what the experiment directly observed** from
+**possible explanations**. This prevents a plausible cause from being reported
+as if it had already been proven.
 
-- **label-space confusion:** the model repeatedly returned familiar-looking
-  categories without reliable mapping from the underlying condition;
-- **example bias:** a one-shot example could steer the output family without
-  teaching the actual coding rule;
-- **reasoning–knowledge mismatch:** more detailed instructions changed the
-  prompt but could not supply missing codebook knowledge.
+### What was directly observed
+
+| Observation | Evidence | Supported conclusion |
+|---|---|---|
+| Valid-looking codes were still wrong | The model often returned a three-character string such as `G05`, but the final exact-match score was 0/10 | Following the output format did not imply correct clinical coding |
+| Predictions concentrated on a small set of similar codes | Several different test notes received repeated `G04`, `G05`, or `G06`-type outputs, while the reference categories spanned multiple ICD chapters | The model did not adequately distinguish the diagnostic content of the cases |
+| More detailed prompts did not improve accuracy | V1, V2, and V5 each scored 1/5; V3 and V4 scored 0/5 on the fixed development set | Additional rules, implicit reasoning, and one-shot prompting did not produce a stable gain |
+| Sampling changed answers but not correctness | `temperature=0.7` and `top_p=0.9` produced different codes without improving the tested cases | Randomness increased output variability rather than solving the mapping problem |
+
+The central error pattern was therefore **valid format, incorrect meaning**.
+The model learned what an ICD category looks like, but it did not reliably map
+the hospital-course information to the correct category.
 
 ```mermaid
 flowchart LR
-    A[Valid-looking output] --> B{Correct code?}
-    B -->|No| C[Missing ICD knowledge]
-    B -->|No| D[Principal diagnosis confusion]
-    B -->|No| E[Prompt/example bias]
-    C --> F[Retrieval or fine-tuning]
-    D --> G[Rule-aware training data]
-    E --> H[Broader and balanced examples]
+    A[Valid code format] --> B[Wrong clinical category]
+    B --> C[Repeated small code set]
+    C --> D[No stable prompt gain]
+    D --> E[Investigate causes with controlled baselines]
 ```
+
+### Possible causes — not proven by this experiment
+
+| Hypothesis | Why it is plausible | How to test it |
+|---|---|---|
+| Insufficient ICD-10-AM and ACS knowledge | The 0.5B general instruction model was not trained specifically for Australian clinical coding | Compare zero-shot generation with RAG using an ICD/ACS knowledge base |
+| Model capacity limitation | Mapping a long clinical narrative to one principal diagnosis requires summarisation, rule application, and code selection | Run the same locked cases with larger models under the same prompt and decoding protocol |
+| Prompt or example sensitivity | Prompt versions changed predictions, but none improved reliably | Repeat with several balanced examples and multiple prompt-order controls |
+| Free-generation mismatch | The task has a fixed label space, while the model generated a code from unrestricted text | Compare free generation with constrained candidate retrieval and ranking |
+
+These are hypotheses for follow-up experiments. The current results demonstrate
+unreliable coding performance, but they do not isolate one definitive cause.
 
 ## 8. Improvement plan
 
