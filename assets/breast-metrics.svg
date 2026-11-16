@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="360" viewBox="0 0 820 360" role="img" aria-labelledby="title desc">
+  <title id="title">Held-out breast tumour classification metrics</title>
+  <desc id="desc">Accuracy 97.37 percent, malignant precision 100 percent, malignant recall 93 percent, and malignant F1 96 percent.</desc>
+  <style>
+    .title{font:600 18px system-ui,sans-serif;fill:#24292f}.label{font:14px system-ui,sans-serif;fill:#24292f}.tick{font:12px system-ui,sans-serif;fill:#57606a}.grid{stroke:#d0d7de;stroke-width:1}.track{fill:#eaeef2}.bar{fill:#1f883d}.bar2{fill:#0969da}.value{font:600 14px system-ui,sans-serif;fill:#24292f}
+    @media (prefers-color-scheme:dark){.title,.label,.value{fill:#f0f6fc}.tick{fill:#8c959f}.grid{stroke:#30363d}.track{fill:#21262d}}
+  </style>
+  <text class="title" x="20" y="30">Held-out test performance (n = 114)</text>
+  <g>
+    <line class="grid" x1="210" y1="55" x2="210" y2="315"/><text class="tick" x="210" y="338" text-anchor="middle">0.0</text>
+    <line class="grid" x1="350" y1="55" x2="350" y2="315"/><text class="tick" x="350" y="338" text-anchor="middle">0.25</text>
+    <line class="grid" x1="490" y1="55" x2="490" y2="315"/><text class="tick" x="490" y="338" text-anchor="middle">0.50</text>
+    <line class="grid" x1="630" y1="55" x2="630" y2="315"/><text class="tick" x="630" y="338" text-anchor="middle">0.75</text>
+    <line class="grid" x1="770" y1="55" x2="770" y2="315"/><text class="tick" x="770" y="338" text-anchor="middle">1.0</text>
+  </g>
+  <text class="label" x="20" y="95">Accuracy</text><rect class="track" x="210" y="73" width="560" height="30" rx="6"/><rect class="bar2" x="210" y="73" width="545" height="30" rx="6"/><text class="value" x="760" y="94" text-anchor="end">0.9737</text>
+  <text class="label" x="20" y="157">Malignant precision</text><rect class="track" x="210" y="135" width="560" height="30" rx="6"/><rect class="bar" x="210" y="135" width="560" height="30" rx="6"/><text class="value" x="760" y="156" text-anchor="end">1.00</text>
+  <text class="label" x="20" y="219">Malignant recall</text><rect class="track" x="210" y="197" width="560" height="30" rx="6"/><rect class="bar" x="210" y="197" width="521" height="30" rx="6"/><text class="value" x="760" y="218" text-anchor="end">0.93</text>
+  <text class="label" x="20" y="281">Malignant F1</text><rect class="track" x="210" y="259" width="560" height="30" rx="6"/><rect class="bar" x="210" y="259" width="538" height="30" rx="6"/><text class="value" x="760" y="280" text-anchor="end">0.96</text>
+</svg>

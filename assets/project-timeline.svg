@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio project timeline from 2020 to 2026</title>
+  <desc id="desc">Five projects spanning nanocarrier research, marine microbial analysis, breast tumour classification, clinical ICD coding, and intracranial haemorrhage segmentation.</desc>
+  <style>
+    .label{font:600 15px system-ui,sans-serif;fill:#24292f}.sub{font:13px system-ui,sans-serif;fill:#57606a}.year{font:12px system-ui,sans-serif;fill:#57606a}.axis{stroke:#8c959f;stroke-width:2}.grid{stroke:#d0d7de;stroke-width:1}.bar1{fill:#8250df}.bar2{fill:#bf8700}.bar3{fill:#1f883d}.bar4{fill:#0969da}.bar5{fill:#cf222e}
+    @media (prefers-color-scheme:dark){.label{fill:#f0f6fc}.sub,.year{fill:#8c959f}.axis{stroke:#8c959f}.grid{stroke:#30363d}}
+  </style>
+  <line class="axis" x1="255" y1="285" x2="965" y2="285"/>
+  <g>
+    <line class="grid" x1="270" y1="42" x2="270" y2="290"/><text class="year" x="270" y="310" text-anchor="middle">2020</text>
+    <line class="grid" x1="380" y1="42" x2="380" y2="290"/><text class="year" x="380" y="310" text-anchor="middle">2021</text>
+    <line class="grid" x1="490" y1="42" x2="490" y2="290"/><text class="year" x="490" y="310" text-anchor="middle">2022</text>
+    <line class="grid" x1="600" y1="42" x2="600" y2="290"/><text class="year" x="600" y="310" text-anchor="middle">2023</text>
+    <line class="grid" x1="710" y1="42" x2="710" y2="290"/><text class="year" x="710" y="310" text-anchor="middle">2024</text>
+    <line class="grid" x1="820" y1="42" x2="820" y2="290"/><text class="year" x="820" y="310" text-anchor="middle">2025</text>
+    <line class="grid" x1="930" y1="42" x2="930" y2="290"/><text class="year" x="930" y="310" text-anchor="middle">2026</text>
+  </g>
+  <text class="label" x="20" y="68">Nanocarrier research</text><text class="sub" x="20" y="87">Project lead · wet lab</text><rect class="bar1" x="270" y="55" width="55" height="26" rx="6"/>
+  <text class="label" x="20" y="118">Marine microbial analysis</text><text class="sub" x="20" y="137">Sampling · microscopy</text><rect class="bar2" x="380" y="105" width="55" height="26" rx="6"/>
+  <text class="label" x="20" y="168">Breast tumour classifier</text><text class="sub" x="20" y="187">Classical ML · evaluation</text><rect class="bar3" x="833" y="155" width="24" height="26" rx="6"/>
+  <text class="label" x="20" y="218">Clinical ICD coding</text><text class="sub" x="20" y="237">Small LLM · prompt analysis</text><rect class="bar4" x="895" y="205" width="30" height="26" rx="6"/>
+  <text class="label" x="20" y="268">ICH CT segmentation</text><text class="sub" x="20" y="287">nnU-Net · HPC · five folds</text><rect class="bar5" x="915" y="255" width="45" height="26" rx="6"/>
+</svg>

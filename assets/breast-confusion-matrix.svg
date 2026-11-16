@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="500" viewBox="0 0 620 500" role="img" aria-labelledby="title desc">
+  <title id="title">Held-out confusion matrix</title>
+  <desc id="desc">Seventy-two benign cases correctly predicted as benign, zero benign cases predicted malignant, three malignant cases predicted benign, and thirty-nine malignant cases correctly predicted malignant.</desc>
+  <style>
+    .title{font:600 18px system-ui,sans-serif;fill:#24292f}.axis{font:600 14px system-ui,sans-serif;fill:#24292f}.label{font:14px system-ui,sans-serif;fill:#24292f}.big{font:700 32px system-ui,sans-serif;fill:#24292f}.light{font:700 32px system-ui,sans-serif;fill:#fff}.cell0{fill:#eaeef2}.cell1{fill:#b6d7f2}.cell2{fill:#54aeff}.cell3{fill:#0969da}
+    @media (prefers-color-scheme:dark){.title,.axis,.label,.big{fill:#f0f6fc}.cell0{fill:#21262d}.cell1{fill:#1f6feb}.cell2{fill:#0969da}.cell3{fill:#58a6ff}}
+  </style>
+  <text class="title" x="20" y="32">Held-out confusion matrix (n = 114)</text>
+  <text class="axis" x="390" y="70" text-anchor="middle">Predicted class</text>
+  <text class="label" x="330" y="105" text-anchor="middle">Benign</text><text class="label" x="470" y="105" text-anchor="middle">Malignant</text>
+  <text class="axis" x="60" y="265" text-anchor="middle" transform="rotate(-90 60 265)">Actual class</text>
+  <text class="label" x="180" y="205" text-anchor="end">Benign</text><text class="label" x="180" y="345" text-anchor="end">Malignant</text>
+  <rect class="cell3" x="210" y="125" width="240" height="130" rx="8"/><text class="light" x="330" y="202" text-anchor="middle">72</text>
+  <rect class="cell0" x="455" y="125" width="130" height="130" rx="8"/><text class="big" x="520" y="202" text-anchor="middle">0</text>
+  <rect class="cell1" x="210" y="260" width="240" height="130" rx="8"/><text class="big" x="330" y="337" text-anchor="middle">3</text>
+  <rect class="cell2" x="455" y="260" width="130" height="130" rx="8"/><text class="light" x="520" y="337" text-anchor="middle">39</text>
+  <text class="label" x="310" y="430">False negatives: 3 malignant records predicted as benign</text>
+</svg>

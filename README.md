@@ -1,65 +1,97 @@
-# Linpeng Yang
+# Linpeng Yang | Medical AI & Health Data Science Portfolio
 
-Machine learning and health data science graduate with hands-on experience in
-medical image segmentation, clinical language-model evaluation, tabular
-classification, high-performance computing, and reproducible research
-workflows.
+MSc Health Data Science graduate focused on medical imaging, clinical NLP,
+machine-learning evaluation, and reproducible research. I turn research
+questions into traceable workflows: data audit, model design, controlled
+experiments, error analysis, and evidence-bounded reporting.
 
 [中文版本](README.zh-CN.md)
 
-## Focus
+## Profile snapshot
 
-- Medical AI and health data science
-- Machine learning evaluation and error analysis
-- PyTorch, scikit-learn, Transformers, and nnU-Net
-- Reproducible experiments on Linux and NCI Gadi HPC
-- Evidence-bounded reporting and patient-data-aware publication
+- **Target roles:** AI algorithm engineer · Medical AI · LLM applications
+- **Core stack:** Python · PyTorch · scikit-learn · Transformers · nnU-Net
+- **Research workflow:** Jupyter · Git · Linux · NCI Gadi · PBS
+- **Strengths:** experiment design · cross-validation · error analysis ·
+  reproducible reporting
+
+## Project timeline
+
+![Project timeline](assets/project-timeline.svg)
 
 ## Featured projects
 
-| Project | What I worked on | Public evidence |
-|---|---|---|
-| [Intracranial haemorrhage segmentation](projects/ich-segmentation.md) | 2025.11–2026.08 · Five-fold comparison of 2D, standard three-slice 2.5D, and 3D nnU-Net on 192 head CT cases | [Code and validated aggregate results](https://github.com/Kandasorat/bhsd-nnunet) |
-| [Clinical ICD coding with a small language model](projects/icd-coding.md) | 2025.09–2025.12 · Structured-output prompting and error analysis with Qwen2.5-0.5B-Instruct | Public project summary; clinical text is not published |
-| [Breast tumour classification](projects/breast-tumour-classification.md) | 2025.02–2025.03 · Data cleaning, stratified evaluation, and regularized logistic-regression tuning | Public project summary; coursework data is not published |
-| [Marine microbial abundance analysis](projects/marine-microbial-analysis.md) | 2021.01–2021.05 · Plate-count and fluorescence-microscopy comparison across environmental samples | Public project summary |
-| [Stimuli-responsive marine polysaccharide nanocarrier](projects/nanocarrier-research.md) | 2020.01–2020.06 · Undergraduate project leadership and wet-lab validation | Public project summary |
+| Project | Dataset | End-to-end work | Selected outcome |
+|---|---|---|---|
+| [Intracranial haemorrhage CT segmentation](projects/ich-segmentation.md) | **BHSD** head CT dataset, 192 aligned cases | Data governance → nnU-Net preprocessing → five-fold 2D/2.5D/3D training → OOF inference → paired and efficiency analysis | 3D native foreground Dice **0.307**; complete accuracy–recall–compute trade-off analysis |
+| [Clinical ICD coding with a small language model](projects/icd-coding.md) | **Asclepius Synthetic Clinical Notes**, 158,114 records; 5 development and 10 test cases selected by the assignment | Dataset filtering → five prompt versions → structured parsing → decoding comparison → independent error analysis | Prompting constrained the output format but did not solve coding accuracy for Qwen2.5-0.5B |
+| [Breast tumour classification](projects/breast-tumour-classification.md) | Course-provided **FNA Breast Cancer Tumour Dataset**, 580 records and Wisconsin-style morphology features | Data audit → label and duplicate cleaning → encoding/scaling → stratified split → GridSearchCV → held-out evaluation | **97.37%** accuracy and **0.93** malignant recall on 114 test records |
+| [Marine microbial abundance analysis](projects/marine-microbial-analysis.md) | Field-collected seawater samples from different locations and sampling times | Sampling → plate counting → fluorescence microscopy → method comparison → environmental interpretation | Built a comparative experimental workflow linking abundance measurements with sampling conditions |
+| [Stimuli-responsive marine-polysaccharide nanocarrier](projects/nanocarrier-research.md) | Project-generated formulation, cell-uptake, lysosomal-escape, stability, biosafety, and tumour-inhibition assay data | Project planning → carrier preparation → in-vitro validation → imaging and safety assessment → team reporting | Led the project and integrated multiple wet-lab validation streams |
+
+## How I work
+
+```mermaid
+flowchart LR
+    A[Research question] --> B[Dataset and quality audit]
+    B --> C[Reproducible preprocessing]
+    C --> D[Baseline and experiment design]
+    D --> E[Validation and metrics]
+    E --> F[Error and subgroup analysis]
+    F --> G[Evidence-bounded conclusions]
+    G --> H[Public documentation]
+```
 
 ## Selected results
 
-- Completed a patient-aligned, five-fold multiclass ICH segmentation benchmark
-  with 576 out-of-fold predictions. Native foreground mean Dice was 0.271 for
-  2D, 0.258 for standard three-slice 2.5D, and 0.307 for 3D. The public report
-  retains the recall, small-lesion, and compute trade-offs behind those values.
-- Built a reproducible V100 efficiency comparison covering 15 method-fold
-  tasks and 576 whole-case timing records.
-- Evaluated prompt variants for small-model ICD coding, then used independent
-  test errors to identify label confusion and example bias and propose RAG,
-  fine-tuning, and rule-validation improvements.
-- Trained and tuned a logistic-regression classifier on 569 cleaned FNA
-  samples; the held-out test result was 97.37% accuracy with 0.93 malignant
-  recall.
+### ICH segmentation benchmark
 
-## Technical toolkit
+| Method | Native foreground Dice | Whole-case wall median | Peak GPU allocation |
+|---|---:|---:|---:|
+| 2D nnU-Net | 0.2708 ± 0.0156 | 9.188 s | 2.706 GB |
+| Standard three-slice 2.5D | 0.2583 ± 0.0107 | 10.004 s | 2.771 GB |
+| 3D full resolution | **0.3065 ± 0.0343** | 20.173 s | 7.994 GB |
 
-**Programming and ML:** Python, PyTorch, scikit-learn, Transformers, pandas,
-NumPy, nnU-Net
+The 3D model improved native Dice and false-positive control, but required more
+time and memory and showed weaker recall and small-lesion sensitivity. The
+tested three-slice 2.5D configuration remained close to 2D in cost without a
+stable accuracy advantage.
 
-**Methods:** classification, medical image segmentation, cross-validation,
-regularized logistic regression, GridSearchCV, prompt evaluation, error
-analysis, experiment tracking
+### Breast tumour classifier
 
-**Research infrastructure:** Git, Linux, Jupyter, NCI Gadi, PBS job workflows
+| Metric | Held-out test result |
+|---|---:|
+| Accuracy | **0.9737** |
+| Malignant precision | **1.00** |
+| Malignant recall | **0.93** |
+| Malignant F1 | **0.96** |
+
+### Small-model ICD coding
+
+Five prompt designs were compared on a fixed development set. The best
+development accuracy was 20%, and the final ten-case test produced no correct
+codes. The experiment therefore became a useful negative result: formatting
+constraints alone could not supply missing ICD-10-AM knowledge.
+
+## Technical matrix
+
+| Area | Tools and methods |
+|---|---|
+| Medical imaging | nnU-Net v2, 2D/2.5D/3D segmentation, OOF evaluation, lesion analysis |
+| Classical ML | pandas, NumPy, scikit-learn, logistic regression, GridSearchCV |
+| Clinical NLP | Hugging Face Transformers, Qwen2.5, prompt comparison, structured parsing |
+| Evaluation | stratified splits, cross-validation, Dice, precision/recall/F1, bootstrap analysis |
+| Research engineering | Git, Linux, PBS, NCI Gadi, experiment manifests, checksum validation |
+| Wet-lab research | microscopy, plate counting, nanocarrier preparation, cell assays |
 
 ## Education
 
-- MSc Health Data Science, UNSW Sydney, 2024–2026
-- BSc Biotechnology, Ocean University of China, 2017–2022
+- **MSc Health Data Science**, UNSW Sydney, 2024–2026
+- **BSc Biotechnology**, Ocean University of China, 2017–2022
 
-## Publication and data boundary
+## Responsible publication
 
-This portfolio contains aggregate results and project descriptions only. It
-does not publish patient images, clinical text, identifiers, model checkpoints,
-coursework datasets, laboratory raw data, internal storage paths, or scheduler
-records. Projects without a public repository are labelled as summaries rather
-than presented as open-source implementations.
+The portfolio presents project methods, aggregate findings, and reproducible
+workflow descriptions. Personally identifying information, patient-level
+content, clinical-note text, credentials, internal paths, and unpublished raw
+records are excluded from the public presentation.
