@@ -18,17 +18,11 @@
 ## End-to-end workflow
 
 ```mermaid
-flowchart TD
-    A[580 raw FNA records] --> B[Schema and class audit]
-    B --> C[Remove invalid diagnosis]
-    C --> D[Resolve duplicate IDs]
-    D --> E[Encode age groups]
-    E --> F[Stratified 80/20 split]
-    F --> G[Fit StandardScaler on training data]
-    G --> H[3-fold GridSearchCV]
-    H --> I[Select regularized logistic model]
-    I --> J[Held-out test evaluation]
-    J --> K[Confusion matrix and deployment review]
+flowchart LR
+    A[Audit & clean<br/>580 → 569] --> B[Encode & stratified split]
+    B --> C[Scale & GridSearch]
+    C --> D[Held-out evaluation]
+    D --> E[Error & deployment review]
 ```
 
 ## 1. Data understanding

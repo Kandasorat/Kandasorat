@@ -18,16 +18,12 @@
 ## 完整流程
 
 ```mermaid
-flowchart TD
-    A[Asclepius 合成病历] --> B[筛选固定开发与测试病例]
-    B --> C[构建 system 与 user 消息]
-    C --> D[应用 Qwen chat template]
-    D --> E[分词与生成]
-    E --> F[只提取新生成 token]
-    F --> G[截取并标准化三字符代码]
-    G --> H[与 ICD-10-AM 参考类别比较]
-    H --> I[Prompt 版本与错误分析]
-    I --> J[RAG、微调与规则校验方案]
+flowchart LR
+    A[筛选数据] --> B[Prompt V1–V5]
+    B --> C[生成与解析]
+    C --> D[开发集与测试集评估]
+    D --> E[错误分析]
+    E --> F[RAG 与微调方案]
 ```
 
 ## 1. 数据与实验划分

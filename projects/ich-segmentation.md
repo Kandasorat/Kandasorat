@@ -18,22 +18,12 @@
 ## End-to-end workflow
 
 ```mermaid
-flowchart TD
-    A[BHSD head CT and labels] --> B[Governance and patient inventory]
-    B --> C[Five aligned folds]
-    C --> D[nnU-Net planning and preprocessing]
-    D --> E1[2D training × 5]
-    D --> E2[Three-slice 2.5D training × 5]
-    D --> E3[3D full-resolution training × 5]
-    E1 --> F[OOF inference]
-    E2 --> F
-    E3 --> F
-    F --> G[Native and pooled segmentation metrics]
-    F --> H[Lesion and small-volume analysis]
-    F --> I[Same-V100 efficiency audit]
-    G --> J[Paired interpretation and reporting]
-    H --> J
-    I --> J
+flowchart LR
+    A[Data audit<br/>192 cases] --> B[Five aligned folds]
+    B --> C[Train<br/>2D · 2.5D · 3D]
+    C --> D[OOF inference]
+    D --> E[Accuracy · lesions · efficiency]
+    E --> F[Paired reporting]
 ```
 
 ## 1. Dataset and task definition

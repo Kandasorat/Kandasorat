@@ -18,16 +18,12 @@
 ## End-to-end workflow
 
 ```mermaid
-flowchart TD
-    A[Asclepius synthetic notes] --> B[Filter fixed development and test IDs]
-    B --> C[Build system and user messages]
-    C --> D[Apply Qwen chat template]
-    D --> E[Tokenize and generate]
-    E --> F[Extract newly generated tokens]
-    F --> G[Normalize first 3 characters]
-    G --> H[Compare with ICD-10-AM category]
-    H --> I[Prompt-version and error analysis]
-    I --> J[RAG, fine-tuning, and rule-validation proposal]
+flowchart LR
+    A[Filter dataset] --> B[Prompt V1–V5]
+    B --> C[Generate & parse]
+    C --> D[Development & test evaluation]
+    D --> E[Error analysis]
+    E --> F[RAG & fine-tuning plan]
 ```
 
 ## 1. Dataset preparation

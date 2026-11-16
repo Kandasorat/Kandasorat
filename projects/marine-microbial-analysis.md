@@ -16,16 +16,10 @@
 
 ```mermaid
 flowchart LR
-    A[Sampling plan] --> B[Seawater collection]
-    B --> C[Time and location metadata]
-    B --> D[Plate culture and colony counts]
-    B --> E[Fluorescent staining and microscopy]
-    D --> F[Standardized abundance table]
-    E --> F
-    C --> G[Environmental grouping]
-    F --> H[Method and condition comparison]
-    G --> H
-    H --> I[Interpretation and report]
+    A[Sampling] --> B[Plate count & microscopy]
+    B --> C[Standardise results]
+    C --> D[Compare methods & conditions]
+    D --> E[Interpret & report]
 ```
 
 ## 1. Study design

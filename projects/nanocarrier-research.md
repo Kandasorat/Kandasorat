@@ -15,16 +15,12 @@
 ## Research workflow
 
 ```mermaid
-flowchart TD
-    A[Define delivery objective] --> B[Design carrier formulation]
-    B --> C[Prepare marine-polysaccharide nanocarrier]
-    C --> D[Characterization and stability]
-    D --> E[shRNA loading and delivery]
-    E --> F[Cellular uptake imaging]
-    F --> G[Lysosomal escape assessment]
-    G --> H[In-vitro tumour-inhibition assay]
-    H --> I[Biosafety evaluation]
-    I --> J[Integrated interpretation]
+flowchart LR
+    A[Plan] --> B[Prepare carrier]
+    B --> C[Stability & delivery]
+    C --> D[Uptake & escape]
+    D --> E[Function & safety]
+    E --> F[Integrated report]
 ```
 
 ## 1. Project planning
